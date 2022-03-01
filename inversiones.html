@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iobank - Inversiones</title>
+        <!-- BOOTSTRAP -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+</head>
+<body>
+    <header class="container-fluid text-center bg-dark text-white pt-5">
+        <div class="row g-3 py-3" id="centrar">
+            <div class="light">
+            </div>
+            <a href="index.html" class="text-decoration-none"><h1 class="text-light">Iobank</h1></a>
+        </div>
+        <nav class="navLog">
+            <a href="login.html" class="logout">Cerrar sesión</a>
+        </nav>
+        <div class="row g-3 py-1">
+            <ul id="criptoPriceList" class="list-group list-group-horizontal">
+            </ul>
+        </div> 
+    </header>
+<body>
+    <main class="bg-light py-5">
+        <div class="container-lg">   
+            <div class="row py-2 mx-2 justify-content-md-center">
+                <div class="col-sm-10 bg-secondary py-2 px-2">
+                    <h2 class="text-light text-center">Inversiones</h2>
+                    <p class="text-light text-justify ms-2">A continuación se detallan las inversiones que nuestro banco le ofrece:</p>
+                    <div class="inversiones">
+                        <div class="activoFinanciero">
+                            <span><h3>Fondos Comúnes de Inversión</h3> 
+                                <p>Rendimiento anual esperado: 55%</p>
+                                <p>Riesgo: Medio</p>
+                                <p>Moneda: Pesos</p>
+                            </span> 
+                        </div>
+                        <div class="activoFinanciero">
+                            <span><h3>Plazo Fijo</h3> 
+                                <p>Rendimiento anual esperado: 35%</p>
+                                <p>Riesgo: Bajo</p>
+                                <p>Moneda: Pesos</p>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="col-10-md rendimientos text-light">
+                        <h4 class="py-2">Calcule su rendimiento:</h4>
+                        <form class="row g-3 align-items-center text-light py-2">
+                            <div class="col-auto">
+                                <label for="inputNumber" class="col-form-label">Instrumento</label>  
+                            </div>
+                            <div class="col-auto">
+                                <select class="form-select activos selectBlack" aria-label="Default select example">
+                                    <option selected>Fondos comunes de inversión</option>
+                                    <option>Plazo fijo</option>
+                                </select>
+                            </div>  
+                        </form>    
+                        <div class="row g-3 align-items-center text-light py-2">
+                            <div class="col-auto">
+                                <label for="inputNumber" class="col-form-label labelW">Capital</label>
+                            </div>
+                            <div class="col-auto">
+                                <input type="number" id="capitalNro" class="form-control inputBlack" aria-describedby="passwordHelpInline">
+                            </div>
+                        </div>
+                        <div class="row g-3 align-items-center text-light py-2">
+                            <div class="col-auto">
+                                <label for="inputNumber" class="col-form-label labelW">Días</label>
+                            </div>
+                            <div class="col-auto">
+                                <input type="number" id="diasNro" class="form-control inputBlack" aria-describedby="passwordHelpInline">
+                            </div>
+                        </div>
+                        <div class="col-auto">
+                            <button type="button" class="btn btn-success btn-block text-light mx-1" role="button" id="btnCalcular">Calcular</button>
+                            <button onclick="window.location.href='index.html'" type="button" class="btn btn-dark btn-block text-light mx-1" role="button">Volver</button>
+                        </div>
+                        <p class="bg-dark text-light" id="resultadoRend"></p>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </main>  
+    <footer>
+        <div class="wvs">
+            <div class="wv wv1"></div>
+            <div class="wv wv2"></div>
+            <div class="wv wv3"></div>
+            <div class="wv wv4"></div>
+        </div>
+    </footer>    
+    <!-- BOOTSTRAP -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="js/inversiones.js"></script>
+    <script src="js/cotizaciones.js"></script>   
+</body>
+</html>

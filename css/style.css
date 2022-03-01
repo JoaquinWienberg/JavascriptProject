@@ -1,0 +1,1435 @@
+header {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* LOGO */
+#centrar {
+    display: flex;
+    justify-content: center !important;
+    align-items: center;
+}
+
+.light {
+    position: relative !important;
+    width: 100px !important;
+    height: 100px !important;  
+    border-radius: 50%;
+    background: linear-gradient(90deg, rgba(56,219,94,1) 14%, rgba(34,227,238,1) 40%, rgba(246,61,229,1) 98%);
+    animation: animate 0.5s linear infinite;
+}
+
+
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+.light span:nth-child(1){
+    filter: blur(5px);
+}
+
+.light span:nth-child(2){
+    filter: blur(10px);
+}
+
+.light span:nth-child(3){
+    filter: blur(25px);
+}
+
+.light span:nth-child(4){
+    filter: blur(50px);
+}
+
+.light:after{
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    background: rgb(11, 27, 58);
+    border-radius: 50%;
+}
+
+/* Cripto prices tag */
+
+#criptoPriceList {
+    border-top: solid 2px white;
+    border-bottom: solid 2px white;
+    padding: 7px 3px;
+    list-style-type: none;
+    position: relative;
+    display: flex;
+    justify-content: end;
+    flex-wrap: wrap;
+}
+
+.criptoPrice {
+    position: relative;
+    padding: 0 3px;
+    font-family: 'Mukta', sans-serif;
+    animation: criptoPrices 8s infinite linear;
+    font-size: 8px;
+}
+
+@keyframes criptoPrices{
+    0% {
+        right:-50%;
+    }
+
+    100%{
+        right: 100%;
+    }
+
+}
+
+/* Index Buttons */
+
+.rgbBtn {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    width: 260px;
+    height: 90px;
+    line-height: 85px !important;
+    background: black;
+    text-transform: uppercase;
+    font-size: 20px !important;
+    letter-spacing: 4px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.rgbBtn span{
+    position: absolute;
+    display: block;
+    top: 2px;
+    left: 2px;
+    right: 2px;
+    bottom: 2px;
+    text-align: center;
+    background: black;
+    color: rgba(255,255,255,0.2);
+    transition: 0.5s;
+    z-index: 1;
+}
+
+.rgbBtn:hover span{
+    color: rgba(255,255,255,1);
+}
+
+.rgbBtn::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #fb0094, #00f, #0f0, #ff0, #f00, #fb0094,#00f, #0f0, #ff0, #f00 );
+    background-size: 400%;
+    opacity: 0;
+    transition: 0.5s;
+    animation: animate2 20s linear infinite;
+}
+.rgbBtn:hover::after {
+    opacity: 1;
+}
+
+.rgbBtn:hover::before {
+    opacity: 1;
+}
+
+@keyframes animate2 {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 300% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.rgbBtn span::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: rgba(255,255,255,0.1);
+}
+
+/* CARDS Inversiones */
+
+
+.inversiones {
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+    justify-content: space-evenly !important;
+    background-color: rgba(39, 38, 38, 0.555);
+    padding: 15px;
+}
+
+.inversiones div {
+    width: 200px;
+    height: 260px;
+    position: relative;
+    opacity: 1;
+    box-sizing: border-box;
+    background: black;
+    color: rgb(85, 84, 83);
+}
+.inversiones div::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0; 
+    background: linear-gradient(45deg, #fb0094, #00f, #0f0, #ff0, #f00, #fb0094,#00f, #0f0, #ff0, #f00 );
+    background-size: 400%;
+    animation: animate2 20s linear infinite;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+
+.inversiones div:hover::before {
+    opacity: 1;
+}
+
+.inversiones div span{
+    position: absolute;
+    top: 4px;
+    bottom: 4px;
+    right: 4px;
+    left: 4px;
+    background-color: black;
+    color: rgb(92, 90, 86);
+    display: block;
+    transition: 0.5s;
+    z-index: 1;
+    padding: 20px 10px;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+.inversiones div span h3 {
+    font-size: 18px;
+    min-height: 58px;
+    letter-spacing: 1.5px;
+}
+
+
+.inversiones div:hover span{
+    color: white;
+}
+.inversiones div:hover h3{
+    color: white;
+}
+
+
+/* Inputs, labels & options bg */
+
+.inputBlack {
+    background-color: black !important;
+    color: white !important;
+    border: solid 1px white;
+    font-size: 30px;
+}
+
+.selectBlack {
+    background-color: black !important;
+    color: white !important;
+    border: solid 1px white;
+    font-size: 30px;
+}
+
+option {
+    background-color: black;
+    color: white;
+    border: solid 2px white;
+    font-size: 15px;
+}
+
+.labelW {
+    min-width: 50px;
+}
+
+/* logout */
+
+
+.logout {
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    font-family: 'Mukta', sans-serif;
+    top: 3px;
+    right: 0%;
+    text-decoration: none;
+    margin-right: 5%;
+}
+
+/* Footer background effect */
+
+.wvs {
+    position: relative;
+    width: 100%;
+    height: 20vh;
+    background: #454545;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.wv {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url(../images/wave.png);
+    background-size: 1000px 100px;
+}
+
+.wv1 {
+    animation: waveAnimate 30s linear infinite;
+    z-index: 15;
+    opacity: 1;
+    animation-delay: 0s;
+    bottom: 0;
+}
+
+.wv2 {
+    animation: waveAnimate2 15s linear infinite;
+    z-index: 14;
+    opacity: 0.5;
+    animation-delay: -5s;
+    bottom: 10px;
+}
+
+.wv3 {
+    animation: waveAnimate 30s linear infinite;
+    z-index: 13;
+    opacity: 0.2;
+    animation-delay: -2s;
+    bottom: 15px;
+}
+
+.wv4 {
+    animation: waveAnimate2 15s linear infinite;
+    z-index: 12;
+    opacity: 0.7;
+    animation-delay: -5s;
+    bottom: 20px;
+}
+
+@keyframes waveAnimate {
+    0% {
+        background-position-x: 0;
+    }
+
+    100% {
+        background-position-x: 100%;
+    }
+}
+
+@keyframes waveAnimate2 {
+    0% {
+        background-position-x: 0;
+    }
+
+    100% {
+        background-position-x: -100%;
+    }
+}
+
+/* Bank movements */
+
+.planillaMovimientos {
+    border: solid 2px grey;
+    border-radius: 15px;
+    padding: 5px;
+    margin: 0 20%;
+}
+
+/* Contact list expand */
+
+.contenidoContactos {
+    height: auto;
+    display: none;
+}
+
+.transferEnding {
+    padding: 8px 0;
+}
+
+.postMsg {
+    margin-top: 8px;
+    animation: newMsg 8s linear;
+    opacity: 0;
+}
+
+@keyframes newMsg {
+    0%{
+        opacity:0;
+    }
+
+    10%{
+        opacity: 1;
+    }
+
+    60%{
+        opacity: 1;
+    }
+
+    100%{
+        opacity: 0;
+    }
+}
+
+/* Efecto Saldo */
+
+.sp1 {
+    animation: up1 4s linear infinite;
+}
+
+@keyframes up1 {
+    0% {
+        color:white;
+        top: 0px;
+    }
+
+    2% {
+        color: red;
+        top:-3px;
+    }
+
+    12% {
+        color: red;
+        top:3px;
+    }
+
+    22% {
+        color: red;
+        top:0px;
+    }
+
+    32% {
+        color: white;
+        top: 0px;
+    }
+
+    100% {
+        color: white;
+        top: 0px;
+    }
+}
+
+.sp2 {
+    animation: up2 4s linear infinite;
+}
+
+@keyframes up2 {
+    0% {
+        color:white;
+        top: 0px
+    }
+
+    5% {
+        color: red;
+        top:-3px;
+    }
+
+    15% {
+        color: red;
+        top:3px;
+    }
+
+    25% {
+        color: red;
+        top:0px;
+    }
+
+    35% {
+        color: white;
+        top: 0px;
+    }
+
+    100% {
+        color: white;
+        top: 0px;
+    }
+}
+
+.sp3 {
+    animation: up3 4s linear infinite;
+}
+
+@keyframes up3 {
+    0% {
+        color:white;
+        top: 0px
+    }
+
+    8% {
+        color: red;
+        top:-3px;
+    }
+
+    18% {
+        color: red;
+        top:3px;
+    }
+
+    28% {
+        color: red;
+        top:0px;
+    }
+
+    38% {
+        color: white;
+        top: 0px;
+    }
+
+    100% {
+        color: white;
+        top: 0px;
+    }
+}
+
+.sp4 {
+    animation: up4 4s linear infinite;
+}
+
+@keyframes up4 {
+    0% {
+        color:white;
+        top: 0px
+    }
+
+    11% {
+        color: red;
+        top:-3px;
+    }
+
+    21% {
+        color: red;
+        top:3px;
+    }
+
+    31% {
+        color: red;
+        top:0px;
+    }
+
+    41% {
+        color: white;
+        top: 0px;
+    }
+
+    100% {
+        color: white;
+        top: 0px;
+    }
+}
+
+.sp5 {
+    animation: up5 4s linear infinite;
+}
+
+@keyframes up5 {
+    0% {
+        color:white;
+        top: 0px
+    }
+
+    14% {
+        color: red;
+        top:-3px;
+    }
+
+    24% {
+        color: red;
+        top:3px;
+    }
+
+    34% {
+        color: red;
+        top:0px;
+    }
+
+    44% {
+        color: white;
+        top: 0px;
+    }
+
+    100% {
+        color: white;
+        top: 0px;
+    }
+}
+
+.sp6 {
+    animation: up6 4s linear infinite;
+}
+
+@keyframes up6 {
+    0% {
+        color:white;
+        top: 0px
+    }
+
+    17% {
+        color: red;
+        top:-3px;
+    }
+
+    27% {
+        color: red;
+        top:3px;
+    }
+
+    37% {
+        color: red;
+        top:0px;
+    }
+
+    47% {
+        color: white;
+        top: 0px;
+    }
+
+    100% {
+        color: white;
+        top: 0px;
+    }
+}
+
+.sp7 {
+    animation: up7 4s linear infinite;
+}
+
+@keyframes up7 {
+    0% {
+        color:white;
+        top: 0px
+    }
+
+    20% {
+        color: red;
+        top:-3px;
+    }
+
+    30% {
+        color: red;
+        top:3px;
+    }
+
+    40% {
+        color: red;
+        top:0px;
+    }
+
+    50% {
+        color: white;
+        top: 0px;
+    }
+
+    100% {
+        color: white;
+        top: 0px;
+    }
+}
+
+.sp8 {
+    animation: up8 4s linear infinite;
+}
+
+@keyframes up8 {
+    0% {
+        color:white;
+        top: 0px
+    }
+
+    23% {
+        color: red;
+        top:-3px;
+    }
+
+    33% {
+        color: red;
+        top:3px;
+    }
+
+    43% {
+        color: red;
+        top:0px;
+    }
+
+    53% {
+        color: white;
+        top: 0px;
+    }
+
+    100% {
+        color: white;
+        top: 0px;
+    }
+}
+
+.sp9 {
+    animation: up9 4s linear infinite;
+}
+
+@keyframes up9 {
+    0% {
+        color:white;
+        top: 0px
+    }
+
+    25% {
+        color: red;
+        top:-3px;
+    }
+
+    35% {
+        color: red;
+        top:3px;
+    }
+
+    45% {
+        color: red;
+        top:0px;
+    }
+
+    55% {
+        color: white;
+        top: 0px;
+    }
+
+    100% {
+        color: white;
+        top: 0px;
+    }
+}
+
+.sp9 {
+    animation: up9 4s linear infinite;
+}
+
+@keyframes up9 {
+    0% {
+        color:white;
+        top: 0px
+    }
+
+    28% {
+        color: red;
+        top:-3px;
+    }
+
+    38% {
+        color: red;
+        top:3px;
+    }
+
+    48% {
+        color: red;
+        top:0px;
+    }
+
+    58% {
+        color: white;
+        top: 0px;
+    }
+
+    100% {
+        color: white;
+        top: 0px;
+    }
+}
+
+.sp10 {
+    animation: up10 4s linear infinite;
+}
+
+@keyframes up10 {
+    0% {
+        color:white;
+        top: 0px
+    }
+
+    31% {
+        color: red;
+        top:-3px;
+    }
+
+    41% {
+        color: red;
+        top:3px;
+    }
+
+    51% {
+        color: red;
+        top:0px;
+    }
+
+    61% {
+        color: white;
+        top: 0px;
+    }
+
+    100% {
+        color: white;
+        top: 0px;
+    }
+}
+
+.sp11 {
+    animation: up11 4s linear infinite;
+}
+
+@keyframes up11 {
+    0% {
+        color:white;
+        top: 0px
+    }
+
+    34% {
+        color: red;
+        top:-3px;
+    }
+
+    44% {
+        color: red;
+        top:3px;
+    }
+
+    54% {
+        color: red;
+        top:0px;
+    }
+
+    64% {
+        color: white;
+        top: 0px;
+    }
+
+    100% {
+        color: white;
+        top: 0px;
+    }
+}
+
+.sp12 {
+    animation: up12 4s linear infinite;
+}
+
+@keyframes up12 {
+    0% {
+        color:white;
+        top: 0px
+    }
+
+    37% {
+        color: red;
+        top:-3px;
+    }
+
+    47% {
+        color: red;
+        top:3px;
+    }
+
+    57% {
+        color: red;
+        top:0px;
+    }
+
+    67% {
+        color: white;
+        top: 0px;
+    }
+
+    100% {
+        color: white;
+        top: 0px;
+    }
+}
+
+.sp13 {
+    animation: up13 4s linear infinite;
+}
+
+@keyframes up13 {
+    0% {
+        color:white;
+        top: 0px
+    }
+
+    40% {
+        color: red;
+        top:-3px;
+    }
+
+    50% {
+        color: red;
+        top:3px;
+    }
+
+    60% {
+        color: red;
+        top:0px;
+    }
+
+    70% {
+        color: white;
+        top: 0px;
+    }
+
+    100% {
+        color: white;
+        top: 0px;
+    }
+}
+
+.sp14 {
+    animation: up14 4s linear infinite;
+}
+
+@keyframes up14 {
+    0% {
+        color:white;
+        top: 0px
+    }
+
+    43% {
+        color: red;
+        top:-3px;
+    }
+
+    53% {
+        color: red;
+        top:3px;
+    }
+
+    63% {
+        color: red;
+        top:0px;
+    }
+
+    73% {
+        color: white;
+        top: 0px;
+    }
+
+    100% {
+        color: white;
+        top: 0px;
+    }
+}
+
+.sp15 {
+    animation: up15 4s linear infinite;
+}
+
+@keyframes up15 {
+    0% {
+        color:white;
+        top: 0px
+    }
+
+    46% {
+        color: red;
+        top:-3px;
+    }
+
+    56% {
+        color: red;
+        top:3px;
+    }
+
+    66% {
+        color: red;
+        top:0px;
+    }
+
+    76% {
+        color: white;
+        top: 0px;
+    }
+
+    100% {
+        color: white;
+        top: 0px;
+    }
+}
+
+.sp16 {
+    animation: up16 4s linear infinite;
+}
+
+@keyframes up16 {
+    0% {
+        color:white;
+        top: 0px
+    }
+
+    49% {
+        color: red;
+        top:-3px;
+    }
+
+    59% {
+        color: red;
+        top:3px;
+    }
+
+    69% {
+        color: red;
+        top:0px;
+    }
+
+    79% {
+        color: white;
+        top: 0px;
+    }
+
+    100% {
+        color: white;
+        top: 0px;
+    }
+}
+
+.sp17 {
+    animation: up17 4s linear infinite;
+}
+
+@keyframes up17 {
+    0% {
+        color:white;
+        top: 0px
+    }
+
+    52% {
+        color: red;
+        top:-3px;
+    }
+
+    62% {
+        color: red;
+        top:3px;
+    }
+
+    72% {
+        color: red;
+        top:0px;
+    }
+
+    82% {
+        color: white;
+        top: 0px;
+    }
+
+    100% {
+        color: white;
+        top: 0px;
+    }
+}
+
+.sp18 {
+    animation: up18 4s linear infinite;
+}
+
+@keyframes up18 {
+    0% {
+        color:white;
+        top: 0px
+    }
+
+    55% {
+        color: red;
+        top:-3px;
+    }
+
+    65% {
+        color: red;
+        top:3px;
+    }
+
+    75% {
+        color: red;
+        top:0px;
+    }
+
+    85% {
+        color: white;
+        top: 0px;
+    }
+
+    100% {
+        color: white;
+        top: 0px;
+    }
+}
+
+.sp19 {
+    animation: up19 4s linear infinite;
+}
+
+@keyframes up19 {
+    0% {
+        color:white;
+        top: 0px
+    }
+
+    58% {
+        color: red;
+        top:-3px;
+    }
+
+    68% {
+        color: red;
+        top:3px;
+    }
+
+    78% {
+        color: red;
+        top:0px;
+    }
+
+    88% {
+        color: white;
+        top: 0px;
+    }
+
+    100% {
+        color: white;
+        top: 0px;
+    }
+}
+
+.sp20 {
+    animation: up20 4s linear infinite;
+}
+
+@keyframes up20 {
+    0% {
+        color:white;
+        top: 0px
+    }
+
+    61% {
+        color: red;
+        top:-3px;
+    }
+
+    71% {
+        color: red;
+        top:3px;
+    }
+
+    81% {
+        color: red;
+        top:0px;
+    }
+
+    91% {
+        color: white;
+        top: 0px;
+    }
+
+    100% {
+        color: white;
+        top: 0px;
+    }
+}
+
+.sp21 {
+    animation: up21 4s linear infinite;
+}
+
+@keyframes up21 {
+    0% {
+        color:white;
+        top: 0px
+    }
+
+    64% {
+        color: red;
+        top:-3px;
+    }
+
+    74% {
+        color: red;
+        top:3px;
+    }
+
+    84% {
+        color: red;
+        top:0px;
+    }
+
+    94% {
+        color: white;
+        top: 0px;
+    }
+
+    100% {
+        color: white;
+        top: 0px;
+    }
+}
+
+.sp22 {
+    animation: up22 4s linear infinite;
+}
+
+@keyframes up22 {
+    0% {
+        color:white;
+        top: 0px
+    }
+
+    67% {
+        color: red;
+        top:-3px;
+    }
+
+    77% {
+        color: red;
+        top:3px;
+    }
+
+    87% {
+        color: red;
+        top:0px;
+    }
+
+    95% {
+        color: white;
+        top: 0px;
+    }
+
+    100% {
+        color: white;
+        top: 0px;
+    }
+}
+
+.sp23 {
+    animation: up23 4s linear infinite;
+}
+
+@keyframes up23 {
+    0% {
+        color:white;
+        top: 0px
+    }
+
+    70% {
+        color: red;
+        top:-3px;
+    }
+
+    80% {
+        color: red;
+        top:3px;
+    }
+
+    90% {
+        color: red;
+        top:0px;
+    }
+
+    96% {
+        color: white;
+        top: 0px;
+    }
+
+    100% {
+        color: white;
+        top: 0px;
+    }
+}
+
+.sp24 {
+    animation: up24 4s linear infinite;
+}
+
+@keyframes up24 {
+    0% {
+        color:white;
+        top: 0px
+    }
+
+    73% {
+        color: red;
+        top:-3px;
+    }
+
+    83% {
+        color: red;
+        top:3px;
+    }
+
+    93% {
+        color: red;
+        top:0px;
+    }
+
+    97% {
+        color: white;
+        top: 0px;
+    }
+
+    100% {
+        color: white;
+        top: 0px;
+    }
+}
+
+.sp25 {
+    animation: up25 4s linear infinite;
+}
+
+@keyframes up25 {
+    0% {
+        color:white;
+        top: 0px
+    }
+
+    76% {
+        color: red;
+        top:-3px;
+    }
+
+    86% {
+        color: red;
+        top:3px;
+    }
+
+    96% {
+        color: red;
+        top:0px;
+    }
+
+    99% {
+        color: white;
+        top: 0px;
+    }
+
+    100% {
+        color: white;
+        top: 0px;
+    }
+}
+
+.spanSaldo {
+    font-family: 'Mukta', sans-serif;
+    position: relative;
+}
+
+#informeSaldo {
+    font-size: 20px;
+}
+
+.saldoRed {
+    margin-left: 5px;
+}
+
+.list-group{
+    padding-bottom:14px !important;
+}
+
+@media only screen and (min-width: 720px) {
+
+    /* Cripto prices tag */
+
+    #criptoPriceList {
+        padding: 8px 54x;
+    }
+
+    .criptoPrice {
+        font-size: 15px;
+    }
+
+    .inversiones {
+        display: flex;
+        flex-direction: row ;
+        justify-content: space-evenly !important;
+        background-color: rgba(39, 38, 38, 0.555);
+        padding: 20px;
+    }
+    
+    .inversiones div {
+        width: 350px;
+        height: 400px;
+        position: relative;
+        opacity: 1;
+        box-sizing: border-box;
+        background: black;
+        color: rgb(85, 84, 83);
+    }
+
+    .inversiones div span{
+        position: absolute;
+        top: 4px;
+        bottom: 4px;
+        right: 4px;
+        left: 4px;
+        background-color: black;
+        color: rgb(92, 90, 86);
+        display: block;
+        transition: 0.5s;
+        z-index: 1;
+        padding: 20px 10px;
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+    
+    .inversiones div span h3 {
+        font-size: 25px;
+        min-height: 58px;
+        letter-spacing: 2.5px;
+    }
+
+        /* logout */
+
+
+    .logout {
+        font-size: 16px;
+        top: 3px;
+        right: 0%;
+        text-decoration: none;
+        margin-right: 5%;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+
+    /* Cripto prices tag */
+
+    #criptoPriceList {
+        padding: 10px 5px;
+    }
+
+    .criptoPrice {
+        font-size: 20px;
+        animation: criptoPrices 10s infinite linear;
+    }
+
+}
