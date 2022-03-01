@@ -275,7 +275,7 @@ option {
     color: white;
     font-size: 12px;
     position: absolute;
-    font-family: 'Mukta', sans-serif;
+    font-family:'Mukta', sans-serif;
     top: 3px;
     right: 0%;
     text-decoration: none;
@@ -358,11 +358,41 @@ option {
 
 /* Bank movements */
 
+.cabeceraMovimiento {
+    background-color: #454545;
+    font-size: 10px;
+    font-family:'Mukta', sans-serif;
+    color: white;
+    border-radius: 15px 15px 0 0;
+}
+
 .planillaMovimientos {
     border: solid 2px grey;
-    border-radius: 15px;
+    border-radius: 0 0 15px 15px;
     padding: 5px;
     margin: 0 20%;
+    font-size: 10px;
+    font-family:'Mukta', sans-serif;
+}
+
+.bankLine1 {
+    min-width: 40px;
+}
+
+.bankLine3 {
+    min-width: 40px;
+}
+
+.bankMovement {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bankMovement:nth-child(even){
+    background-color: #454545;
+    font-size: 10px;
+    font-family:'Mukta', sans-serif;
+    color: white;
 }
 
 /* Contact list expand */
@@ -375,6 +405,7 @@ option {
 .transferEnding {
     padding: 8px 0;
 }
+
 
 .postMsg {
     margin-top: 8px;
@@ -1417,7 +1448,24 @@ option {
         text-decoration: none;
         margin-right: 5%;
     }
+
+        /* Bank movements */
+
+    .cabeceraMovimiento {
+    font-size: 17px;
+    }
+    
+    .planillaMovimientos {
+        font-size: 17px;
+    }
+
+    .bankMovement:nth-child(even){
+        font-size: 17px;
+    }
+
 }
+
+
 
 @media only screen and (min-width: 1024px) {
 

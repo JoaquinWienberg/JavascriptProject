@@ -5,6 +5,8 @@ let saldoInicial = localStorage.getItem("saldo");
 localStorage.setItem("saldo", saldoInicial)
 let saldoActual = localStorage.getItem("saldo");
 let mensaje = document.getElementById('mensaje');
+var today = new Date();
+var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
 
 //Extracto de movimientos
 
@@ -32,9 +34,10 @@ btnDepo.addEventListener("click", function(){
         saldoFinal = parseInt(localStorage.getItem("saldo")) + parseInt(importeDepo.value);
         actualizarSaldo(saldoFinal);
         console.log("El nuevo saldo es " + localStorage.getItem("saldo"))
+        var valorExtracto = importeDepo.value;
         importeDepo.value = 0.00;
         actualizarMensaje();
-        var infoExtracto = {movimiento: "Deposito de efectivo" , fecha: date, importe: "+ " + parseInt(importeDepo.value)}
+        var infoExtracto = {movimiento: "Deposito de efectivo" , fecha: date, importe: "+ " + parseInt(valorExtracto)}
         var movimientos = JSON.parse(localStorage.getItem("movimientos"));
         movimientos.push(infoExtracto);
         localStorage.setItem("movimientos", JSON.stringify(movimientos));
@@ -43,9 +46,10 @@ btnDepo.addEventListener("click", function(){
             saldoFinal = parseInt(localStorage.getItem("saldo")) - parseInt(importeDepo.value);
             actualizarSaldo(saldoFinal);
             console.log("El nuevo saldo es " + localStorage.getItem("saldo"))
+            var valorExtracto = importeDepo.value;
             importeDepo.value = 0.00;
             actualizarMensaje();
-            var infoExtracto = {movimiento: "Retiro de efectivo" , fecha: date, importe: "- " + parseInt(importeDepo.value)}
+            var infoExtracto = {movimiento: "Retiro de efectivo" , fecha: date, importe: "- " + parseInt(valorExtracto)}
             var movimientos = JSON.parse(localStorage.getItem("movimientos"));
             movimientos.push(infoExtracto);
             localStorage.setItem("movimientos", JSON.stringify(movimientos));

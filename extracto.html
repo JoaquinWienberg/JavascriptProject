@@ -34,12 +34,20 @@
                 <div class="col-lg-10 bg-secondary py-4">
                     <h2 class="text-light text-center" id="bienvenida">Resumen de movimientos</h2>
                     <div class="container bg-dark text-light py-2" id="informeSaldo"></div>
-                    <p class="text-light text-justify ms-2">A continuación se detalla el resumen de movimientos de la cuenta:</p>
+                    <p class="text-light text-justify my-2">A continuación se detalla el resumen de movimientos de la cuenta:</p>
                 </div>
             </div>
-            <div class="row mx-2 justify-content-md-center planillaMovimientos">
+            <div class="row mx-5 px-3 justify-content-md-between cabeceraMovimiento">
+                <div class='col-12 mx-2 p-2 justify-content-md-between bankMovement'>
+                    <div class='bankLine1'>Fecha</div><div class='bankLine2'>Descripción</div><div class='bankLine3'>Importe</div>
+                </div>
+            </div>
+            <div class="row mx-5 justify-content-md-between planillaMovimientos">
             </div>
         </div> 
+        <div class="col-auto text-center m-3">
+            <button onclick="window.location.href='index.html'" type="button" class="btn btn-dark btn-block text-light mx-1" role="button">Volver</button>
+        </div>
         <div id="contactos" style="display: none"> </div>
         <button id="altaContacto" type="submit" class="btn" style="display: none"></button>        
     </main>  

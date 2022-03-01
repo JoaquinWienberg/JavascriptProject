@@ -90,7 +90,7 @@ btnAltaContacto.addEventListener("click", function () {
     localStorage.setItem("contactos", JSON.stringify(contactosIniciales));
     console.log(JSON.parse(localStorage.getItem("contactos")));
     contactosCargados = JSON.parse(localStorage.getItem("contactos"));
-    listado += "<div class='col-md-6 p-4'>";
+    listado += "<div class='col-md-4 p-4'>";
     listado += "<div class='card bg-light shadow-lg'>";
     listado += "<h4 class='card-title text-center'>" + nuevoContacto.nombre + " " +  nuevoContacto.apellido + "</h5>";
     listado += "<img src='images/" + nuevoContacto.imagen + "' class='card-img-top' alt='" + nuevoContacto.nombre + "'>";

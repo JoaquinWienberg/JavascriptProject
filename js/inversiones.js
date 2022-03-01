@@ -22,5 +22,5 @@ function chequearInst (){
 btnCalcular.addEventListener("click", function () {
     rendimiento = parseInt(capital.value) * (parseInt(dias.value) / 365 ) * chequearInst ();
     console.log("El rendimiento es de " + rendimiento + " pesos argentinos.");
-    resultadoMensaje.innerText = "El rendimiento esperado es de " + Math.round(rendimiento) + " pesos argentinos."
+    resultadoMensaje.innerHTML = "<span class='postMsg'>El rendimiento esperado es de " + Math.round(rendimiento) + " pesos argentinos.</span>"
 });
